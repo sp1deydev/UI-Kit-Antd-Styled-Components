@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { ConfigProvider } from 'antd';
+import { PRIMARY, NEUTRAL } from './Constants/Colors';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider
+      theme={{
+        token: {
+          // Seed Token
+          colorPrimary: `${PRIMARY.primaryMain}`,
+  
+          // Alias Token
+          colorBgContainer: `${NEUTRAL.neutral_10}`,
+        },
+      }}
+    >
+      <App />
+    </ConfigProvider>
   </React.StrictMode>
 );
 

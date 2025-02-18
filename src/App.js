@@ -1,10 +1,12 @@
 import './App.css';
+import { BrowserRouter } from 'react-router'
+import Router from './Routes/Router';
 
 function App() {
   return (
-    <div className="App">
-      Sp1dey UI KIT
-    </div>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
   );
 }
 
